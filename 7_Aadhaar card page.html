@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<title>Aadhaar page</title>
+<link rel="icon" type="image/x-icon" href="Aadhaar/Aadhaar_favicon.png">
+<meta name="description" content="creation of Aadhaar page using HTML">
+<meta name="viewport" content="width:device-width,initial-scale=1.0">
+
+
+<style>
+body{
+background-color:#D3D3D3;
+display:flex;
+justify-content:center;
+}
+
+#outer_container{
+width:66%;
+height:400px;
+border:3px groove white;
+border-radius:15px;
+}
+
+#first_line,#last_line{
+display:flex;
+justify-content:center;
+}
+
+#inner_container{
+border:3px groove white;
+height:290px;
+width:900px;
+margin:0 auto;
+display:flex;
+flex-direction:row;
+}
+
+
+#front_side ,#back_side{
+height:280px;
+width:440px;
+margin:5px 5px 5px 5px;
+background-color:white; 
+}
+
+#last_line button
+{
+padding:5px;
+border-radius:5px;
+margin:10px 20px;
+}
+
+
+#frontside_body{
+display:flex;
+flex-direction:row;
+}
+
+#aadhaarimg{
+width:80px;
+height:110px;
+padding:15px;}
+
+#image{
+border:1px solid black;}
+
+#frontInfo{
+width:200px;
+height:120px;
+font-size:13px;
+padding-top:20px;
+}
+
+#frontInfo p{
+margin:0px;
+padding:0px;
+padding-left:5px;
+}
+
+#qr_front{
+margin:50px 5px 0px 15px;
+padding:0px;
+}
+
+#aadhaarNumber{
+height:25px;
+display:flex;
+justify-content:center;
+margin-bottom:10px;
+}
+
+#aadhaarNumber p{
+font-size:22px;
+margin:0px;
+padding:0px;
+}
+
+#footer p{
+border-top:2px solid red;
+display:flex;
+justify-content:center;
+font-size:18px;
+}
+
+#back_side_body{
+height:144px;
+display:flex;
+flex-direction:row;
+font-size:12px;}
+
+#address{
+padding-left:10px;
+width:280px;
+padding-top:2px;
+}
+#address p{
+margin-top:5px;
+}
+#qr_back{
+padding:10px 0px 0px 20px;;
+width:150px;
+}
+
+#back_side #footer{
+padding:0px;
+margin-top:18px;
+}
+
+#back_side #footer p{
+text-align:center;
+font-size:14px;
+padding-top:6px;
+
+}
+
+@media screen and (max-width:1000px){
+
+body{
+background-color:#D3D3D3;
+display:flex;
+justify-content:center;
+}
+
+#outer_container{
+width:100%;
+height:60%;
+border:3px groove white;
+border-radius:15px;
+}
+
+#first_line,#last_line{
+display:flex;
+justify-content:center;
+}
+
+#inner_container{
+border:3px groove white;
+height:600px;
+width:450px;
+margin:0 auto;
+display:block;
+}
+
+</style>
+
+</head>
+<body>
+  <div id="outer_container">
+
+    <div id="first_line">
+	 <p> Your Aadhaar card is ready to print</p>
+    </div>	
+    <div id="inner_container">
+	  <div id="front_side">
+	     <div id ="header">
+		   <img src="Aadhaar/lion.png" alt="lion logo" width="40px" height="55px">
+		   <img src="Aadhaar/flag_front.png" alt="Govt flag" width="300px" height="55px">
+		   <img src="Aadhaar/aadhaar logo.png" alt="logo" width="80px" height="55px">
+		 </div>
+		 <div id="frontside_body">
+		   <div id="aadhaarimg"> <img id="image" src="Aadhaar/Aadhaar image.png" alt="person image" width="90px" height="120px"></div>
+		   <div id="frontInfo"> 
+		    <p>அருண்குமார் சி</p>
+			<p>Arunkumar S</p>
+			<p>பிறந்த நாள்/DOB: 02/06/1997</p>
+            <p>ஆண்/ MALE</p>
+           </div>
+           <div id="qr_front"> <img  src="Aadhaar/qr.png" alt="QR code" width="90px" height="90px"></div>
+			
+		 </div>
+		 <div id="aadhaarNumber">
+		    <p>3747 5197 8328</p>
+		 </div>
+		 <div id="footer">
+		    <p>எனது&nbsp <span style="color:red">ஆதார்</span>, எனது அடையாளம்</p>
+		 </div>
+	  </div>
+	  
+	  <div id="back_side">
+	  	 <div id ="header">
+		   <img src="Aadhaar/lion.png" alt="lion logo" width="40px" height="55px">
+		   <img src="Aadhaar/flag_back.png" alt="Govt flag" width="300px" height="48px">
+		   <img src="Aadhaar/aadhaar logo.png" alt="logo" width="80px" height="55px">
+		 </div>
+		 <div id="back_side_body">
+             <div id="address">
+			 <p><b>முகவரி:</b><br>
+                S/O சிவக்குமார், 55ஏ / 24, காந்தி சாலை,<br> 
+				பட்டணம் ரோடு, இராசிபுரம், நாமக்கல்,<br> 
+				தமிழ் நாடு -637468<br><br>
+				<b>Address:</b><br>
+				S/O Sivakumar, 55A / 24, GANDHI SALAI,<br> 
+				PATTANAM ROAD, Rasipuram, Namakkal,<br> 
+				Tamil Nadu - 637408</p>
+			 </div>
+			 <div id="qr_back">
+			    <img  src="Aadhaar/qr.png" alt="QR code" width="130px" height="130px">
+			 </div>
+		 </div>
+		 
+		 <div id="aadhaarNumber">
+		    <p>3747 5197 8328</p>
+		 </div>
+		 
+		 <div id="footer">
+		    <p>&nbsp<img src="Aadhaar/phone.png" alt="phone" width="15px" height="16px">&nbsp 1947 &nbsp &nbsp | &nbsp
+			&nbsp <img src="Aadhaar/message.png" alt="message" width="15px" height="16px" >&nbsp help@uidai.gov.in &nbsp &nbsp|&nbsp
+			&nbsp <img src="Aadhaar/web.png" alt="web" width="15x" height="16px">&nbsp www.uidai.gov.in</p>
+		 </div>
+	  </div>
+	    
+	</div>
+	<div id="last_line">
+	  <button type="button" value="print">Print</button>
+	  <button type="button" value="download">Download</button>
+
+	</div>
+
+  </div>
+</body>
+
+</html>

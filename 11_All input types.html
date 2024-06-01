@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Profile details form</title>
+<link rel="icon" type= "image/x-icon" href="images/profileDetailsIcon.png" >
+<meta charset="utf-8">
+<meta name="description" content="All input elements in HTML">
+<meta name="viewport" content="width:device-width, intial-scale=1.0">
+
+
+<style>
+body{
+background-color:#fff;
+}
+
+
+#outer_container{
+width:95%;
+padding-left:20px;
+padding-right:20px;
+margin-left:25px;
+background-color:#f5f5bf;
+border:3px groove #f5f5bf;
+border-radius:10px;
+display: block;
+}
+
+#inner_container{
+display:table;
+width:100%;
+border:5px solid #fff;
+border-radius:10px;
+
+}
+
+#first_child_block{
+  width:50%;
+  display:table-cell;
+  border:5px solid white;
+}
+
+#second_child_block{
+  width:40%;
+  display:table-cell;
+  border:5px solid white;
+}
+#third_child_block{
+  width:10%;
+  display:table-cell;
+  border:5px solid white;
+  text-align:center; 
+
+}
+
+#first_child_block div,#second_child_block div,#third_child_block div{
+margin:10px;
+}
+.labelwidth{
+width:150px;
+display:inline-block;
+}
+
+#skillset_block{
+width:80%;
+height:100px;
+display:flex;
+}
+
+.skillsetmessageBox{
+width:50%;
+height:80%;
+border: 1px solid #fff;
+border-radius:5px;
+padding:5px;
+}
+
+.rightsidelabelwidth{
+width:100px;
+display:inline-block;
+}
+
+#nameFields div,#datefields div{
+display: inline-block;;
+padding:0px;
+margin:0px;
+}
+
+input,select{
+size:100px;
+border: 1px solid #ccc;
+border-radius:5px;
+padding:5px;
+}
+
+#submit_block{
+margin-top:10px;
+display:flex;
+justify-content:center;
+
+}
+#submit_block input{
+margin-left:20px;
+margin-bottom:20px;
+font-weight:bold;
+width:80px;
+
+}
+
+@media only screen and (max-width: 1100px) {
+
+#inner_container{
+display:block;
+width:100%;
+}
+
+#first_child_block,#second_child_block,#third_child_block{ 
+width:100%;
+display: block;
+}
+#first_child_block div,#second_child_block div,#third_child_block div{ 
+width:100%;
+display: block;
+}
+
+#nameFields div,#datefields div{
+  display: block;
+  margin-bottom:10px;
+}
+
+#lnamebabel
+{
+width:150px;
+display:inline-block;
+}
+ 
+#uploadresume ,#uploadDoc {
+  width:80px;}
+}
+
+
+</style>
+
+</head>
+
+
+<body>
+<div id="outer_container">
+<h4>Profile details</h4>
+<form action = "/action_page.php" target="_blank" method="post" name="myForm">
+<div id="inner_container">
+<div id="first_child_block" class="col">
+
+<div id="nameFields">
+<div>
+<label for="fname" class="labelwidth">First name</label>
+<input type="text" id="fname" name="firstname" placeholder="First name"> 
+</div>
+<div>
+<label for="lname" id="lnamebabel" >Last name</label>
+<input type="text" id="lname" name="lastname" placeholder="Last name">
+</div>
+</div>
+
+<div>
+<label for="pwd" class="labelwidth">Password</label>
+<input type="password" id="pwd" name="password" value=""><br>
+</div>
+
+<div>
+<label for="phonenum" class="labelwidth">Phone number</label>
+<input type="tel" id="phonenum" name="phone" placeholder="+91-9876543210"><br>
+</div>
+
+<div>
+<label for="age" class="labelwidth"> Age </label>
+<input type="number" id="age" min="0" max="120"><br>
+</div>
+
+<div>
+<label for="gendercat" class="labelwidth"> Gender </label>
+<input type="radio" id="male" name="gender" value="Male">
+<label for="male">Male</label>
+<input type="radio" id="female" name="gender" value="female">
+<label for="female">Female</label><br>
+</div>
+
+<div>
+<label for="marstatus" class="labelwidth"> Marital status </label>
+
+<input type="checkbox" id="married" name="m_status" value="married">
+<label for="married" >Married</label>
+<input type="checkbox" id="un-married" name="u_status" value="un-married">
+<label for="un-married" >Un-married</label>
+<input type="checkbox" id="other" name="p_status" value="personal">
+<label for="un-married" >Personal</label>
+
+</div>
+
+<div>
+<label for="email"class="labelwidth">Email</label>
+<input type="email" id="email" name="email address" placeholder="abcd1234@gmail.com">
+</div>
+
+<div>
+<label for="favcolor" class="labelwidth">Favourite color</label>
+<input type="color" id="favcolor" name="favcolor"><br>
+</div>
+
+<div id="datefields">
+<div>
+<label for="birthdate" class="labelwidth">Born date</label>
+<input type="date" id="birthdate" name="bdate" value="01-01-1990">
+</div>
+
+<div>
+<label for="todaydate"class=" rightsidelabelwidth">Today date</label>
+<input type="datetime-local" id="todaydate" name="Present date" value=""><br>
+</div>
+</div>
+<br>
+
+<div>
+<label for="availability" class="labelwidth"> Availablity </label><br>
+(Provide regular 1 hour availablity time for a week for the interview call)<br><br>
+
+<table>
+<tr>
+<td> <label for="availblemonth" class=" rightsidelabelwidth">Month</label> </td>
+<td> <label for="availbleweek" class=" rightsidelabelwidth" >Week</label> </td>
+<td> <label for="fromtime" class=" rightsidelabelwidth">Start time</label> </td>
+<td> <label for="totime" class=" rightsidelabelwidth" >End time</label></td>
+</tr>
+
+<tr>
+<td> <input type="month" id="availblemonth" name="availblemonth"> </td>
+<td> <input type="week" id="availbleweek" name="availbleweek" > </td>
+<td> <input type="time" id="fromtime" name="fromtime"> </td>
+<td> <input type="time" id="totime" name="totime"> </td>
+</tr>
+</table>
+</div>
+
+<input type="hidden" id="refferenceId" name="custId" value="3487">
+
+</div>
+
+<div id="second_child_block" class="col">
+<div>
+<label for="roleName" class="labelwidth">Current role name </label>
+<input type="text" id="roleName" name="role_name" placeholder="enter your role name"> <br><br>
+
+<label for="experience" class="labelwidth">Experience in Year</label>
+<input type="number" id="experience" name="exp" placeholder="year of experience">
+</div>
+
+<div >
+<label for="cityname" class="labelwidth">Work location </label>
+  <select id="cityname" name="cityname" >
+    <option value="Chennai" >Chennai</option>
+    <option value="Hyderabad">Hyderabad</option>
+    <option value="Bangalore" >Bangalore</option>
+    <option value="Delhi">Delhi</option>
+  </select>
+</div>
+
+<div id="skillset_block">
+<label for="skillset" class="labelwidth"> Skillset</label>
+<textarea class="skillsetmessageBox" id="skillset" name="skillset">I have strong knowledge in HTML,CSS,javascript,Spring, Databases-MySQL,mongoDB</textarea>
+</div>
+
+<div>
+<label for="uploadresume" class="labelwidth">Upload resume</label>
+<input type="file" id="uploadresume" name="resumeDocx" >
+<input type="button" value="Upload" onclick = "">
+</div>
+
+<div>
+<label for="uploadDoc" class="labelwidth" >Upload Aadhaar</label>
+<input type="file" id="uploadDoc" name="addressProofDocx" >
+<input type="button" value="Upload" onclick = "">
+</div>
+
+<div>
+<label for="projectLink" class="labelwidth">Project links </label>
+<input type="url" id="projectLink" name="projectLink" >
+
+<input type="button" value="Upload" onclick = ""/>
+
+</div>
+
+<div>
+<p>Rate your communication skills between 1 and 10</p>
+<label for="comskil" class="labelwidth">Communication skill (Between 1-10)</label>
+<input type="range" min="5" max="10" step="1">
+</div>
+
+
+</div>
+
+<div id="third_child_block" class="col" >
+<div id="test">
+<label for="myimg">Profile picture</label><br><br>
+<input type="image" id="myimg"src="images/profilephoto.png" alt="My profile image" width="100" height="160"><br>
+</div>
+<p><input type="button" value="change photo"/></p>
+</div>
+
+</div>
+
+<div id="submit_block">
+<input type="submit" value="Submit" >
+<input type="reset">
+</div>
+
+</form>
+</div>
+
+
+</body>
+</html>
+

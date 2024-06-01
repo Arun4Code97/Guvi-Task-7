@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Menu</title>
+<link rel="icon" type="image/x-icon" href="images/list.png" >
+<meta charset="UTF-8">
+<meta name="description" content="Programming Language and Database list">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body{
+background-color:#fff;
+}
+#container{
+background-color:#ffe5b4;
+width:35%;
+margin:10vh auto;
+border-style:groove;
+font-family:cursive;
+display:block;
+border-radius:20px;
+}
+#container h2{
+padding-left:20px;}
+
+#titles,#subTitles{
+font-weight:bold;
+padding-top:10px;
+}
+#subTitles
+{
+font-size:15px;
+}
+@media screen and (max-width: 800px) {
+ #container {
+    width: 80%; /* The width is 80%, when the viewport is 800px or smaller */
+  }
+  
+</style>
+</head>
+
+<body>
+<div id="container">
+<h2>Programming Languages and Databases list</h2>
+<ul >
+
+<li id="titles">Programming Language</li>
+  <ul list-style-type="circle">
+   <li id="subTitles">JavaScript</li>
+     <ol type="a">
+	  <li>Angular.js</li>
+	  <li>React.js</li>
+	  <li>Vue.js</li>
+	 </ol>
+   <li id="subTitles">Python</li>
+     <ol type="a">
+	 <li>Django Framework</li>
+	 <li>Flask Framework</li>
+	 </ol>
+   <li id="subTitles">Java</li>
+     <ol type="a">
+	 <li>Spring</li>
+	 <li>Maven</li>
+	 <li>Hibernate</li>
+	 </ol>
+  </ul>
+
+<li id="titles">Database</li>
+ <ul list-style-type="circle"> 
+  <li>MySQL</li>
+  <li>MongoDB</li>
+  <li>Cansandra</li>
+ </ul>
+ 
+</ul>
+</div>
+
+</body>
+</html>

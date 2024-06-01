@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Radio button</title>
+<link rel="icon" type="image/x-icon" href="images/radioButton.png">
+<meta name="description" content="use of raido button">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<style>
+body{
+background-color:#fff;
+}
+
+#container{
+background-color:#d3f2e3;
+width:25%;
+display:block;
+margin: 10% auto;
+border:2px solid;
+border-radius: 15px;
+padding:10px;
+}
+#container div{
+margin-bottom:25px;
+margin-left:20px;
+}
+
+#namebox
+{
+width:66%;
+border:3px groove #E6FFE6;
+border-radius:10px;
+padding:5px;
+}
+#empbox p{
+margin:5px auto;}
+
+
+#submitBox input{
+border-radius:6px;
+padding:3px;
+font-weight:bold;
+}
+
+@media screen and (max-width:800px){
+#container {
+  width: 75%; /* The width is 75%, when the viewport is 800px or smaller */
+}
+}
+</style>
+<body>
+<div id="container">
+<h3>Form with radio buttons</h3>
+<form action="/action_page.php" target="_blank" method="post" >
+<div >
+<label for="name">Name : </label>
+<input id="namebox" type="text" id="name" name="name" ><br>
+</div>
+
+<div id="empbox">
+<p>Choose employee type:</p>
+<input type="radio" id="emp_type" name="employeeType" value="Salaried">
+<label for="emp_type">Salaried</label> 
+<input type="radio" id="emp_type" name="employeeType" value="Own bussiness"> 
+<label for="emp_type">Own bussiness</label>
+</div>
+
+<div id="submitBox">
+<input type="submit" value="Submit">
+</div>
+
+
+</form>
+</div>
+</body>
+</html>

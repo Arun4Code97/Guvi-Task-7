@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Value in form fields</title>
+<link rel="icon" type="image/x-icon" href="images/form_icon.png">
+<meta charset="utf-8">
+<meta name="description" content="default Values for all form elements in HTML ">
+<meta name="viewport" content="width:device-width, intial-scale=1.0">
+<style>
+body {
+background-color:#D3D3D3;
+}
+
+#container{
+margin: 30px auto;
+width:35%;
+background-color:#fff ;
+border:5px groove;
+border-radius:10px; 
+padding :10px;
+}
+
+h3{
+border-bottom-style :groove;
+}
+
+label{
+width:80px;
+display:inline-block;
+}
+
+
+form div{
+font-size:14px;
+padding-bottom:15px;
+}
+
+#firstbox{
+padding-bottom:0px;
+}
+
+
+#seventhbox{
+display:flex;
+}
+
+#seventhbox textarea{
+height:80px;
+width:60%;
+}
+
+.inputstyle,#sub{
+border: 1px solid #ccc;
+border-radius:5px;
+padding:5px;
+}
+
+#sub{
+font-weight:bold;
+}
+
+
+
+@media screen and (max-width:800px){
+#container {
+  width: 70%; /* The width is 70%, when the viewport is 800px or smaller */
+}
+}
+
+</style> -->
+
+</head>
+
+<body>
+
+<div id="container">
+
+<h3> Profile details form </h3>
+<h4> Current details:-</h4>
+<form action="backend.php" target="_blank" method="post" oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+<div id="firstbox" >
+
+<div>
+<label for="firstname"> First name</label>
+<input type="text" id="firstname" class="inputstyle" name="fname" value="Arunkumar" pattern="[a-zA-Z]{8,20}" size="30">
+</div>
+
+<div>
+<label for ="lastname">Last name</label>
+<input type="text" id="lastname"  class="inputstyle" name="lname" Value="Somasundaram" pattern="[a-z A-Z]{8,20}" size="30">
+</div>
+
+</div>
+
+<div id="secondbox"  >
+<label for="email">Email</label>
+<input type="email"  class="inputstyle" id="email" name="mail" value="arunjobmailid@gmail.com" pattern="[a-z]{4,}@[a-z]{5,8}.{a-z}{3}" size="30">
+</div>
+
+<div id="thirdbox" >
+<label for="gender">Gender </label> 
+<input type="radio" id="gender" name="gender" checked="checked">
+<label for="male" >Male</label>
+<input type="radio" id="gender" name="gender">
+<label for="female">Female</label>
+</div>
+
+<div id="fourthbox"  >
+<label for="cityname">City </label>
+  <select class="inputstyle"   id="cityname" name="cityname" >
+    <option value="Chennai" >Chennai</option>
+    <option value="Hyderabad">Hyderabad</option>
+    <option value="Bangalore" selected >Bangalore</option>
+    <option value="Delhi">Delhi</option>
+  </select>
+</div>
+
+<div id="fifthbox">
+<h4>Output Tag</h4>
+<p> Change the range to see the output value in output tag (next to '='symbol)</p>
+0<input type="range" id="a" name="a" value="20">100 + <input type="number" id="b" name="b" value="2"> =  <output name="x" for="a b"  ></output>
+</div>
+
+
+<div id="sixthbox">
+
+<label>Country</label>
+<input class="inputstyle" list="country" name="countryname" value="India">
+  <datalist id="country">
+    <option value="America">
+    <option value="Africa" >
+	<option value="India">
+    <option value="China">
+	<option value="Netherland">
+  </datalist>
+</div>
+
+
+<div id="seventhbox">
+<label for="feedback"> Feedback</label><br>
+<textarea class="inputstyle" id="feedback" name="feedback">Hi,
+The webpage can be used for fetching data from back end and displaying to user for already entered details.</textarea>
+</div>
+
+
+<input id= "sub" type="submit" value="Submit">
+
+<br><br>
+<small> <b> Note</b>: Before submitting, make sure all the details are entered correctly </small>
+
+</form>
+</div>
+</div>
+</body>
+</html>
